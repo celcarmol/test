@@ -3,25 +3,21 @@ package com.company;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.time.LocalDateTime;
-import java.util.*;
 
-public class Main {
+public class Main extends Test {
 
     public static void main(String[] args) throws IOException {
 
-        Vuelo v2 = new VueloImpl("VY7860", "Vueling", LocalDateTime.of(2020, 11, 14, 15, 0));
-        Vuelo v1 = new VueloImpl("VY7861", "Vueling", LocalDateTime.of(2020, 11, 15, 20, 0));
-        Vuelo v3 = new VueloImpl("RY7654", "Ryanair", LocalDateTime.of(2020, 11, 14, 15, 0));
-        Vuelo v4 = new VueloImpl("RY7657", "Ryanair", LocalDateTime.of(2020, 11, 14, 15, 0));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        List<Vuelo> flightList = Arrays.asList(v1, v2, v3);
-        mostrar(flightList);
-        flightList.sort(new ComparadorPorCodigo());
-        mostrar(flightList);
+        Integer a = Integer.parseInt(reader.readLine());
+        Integer b = Integer.parseInt(reader.readLine());
+        Integer c = Integer.parseInt(reader.readLine());
+
+        Double x = (-b - Math.sqrt(b * b - 4 * a * c)) / 2 * a;
+
+        mostrar("Resultado = " + x);
+
     }
 
-    public static void mostrar(Object o) {
-        System.out.println(o);
-    }
 }
