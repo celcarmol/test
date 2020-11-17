@@ -13,6 +13,7 @@ public class Main {
         Vuelo v2 = new VueloImpl("VY7860", "Vueling", LocalDateTime.of(2020, 11, 14, 15, 0));
         Vuelo v1 = new VueloImpl("VY7861", "Vueling", LocalDateTime.of(2020, 11, 15, 20, 0));
         Vuelo v3 = new VueloImpl("RY7654", "Ryanair", LocalDateTime.of(2020, 11, 14, 15, 0));
+        Vuelo v4 = new VueloImpl("RY7657", "Ryanair", LocalDateTime.of(2020, 11, 14, 15, 0));
 
         List<Vuelo> flightList = Arrays.asList(v1, v2, v3);
         mostrar(flightList);
